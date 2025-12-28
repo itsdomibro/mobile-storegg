@@ -20,19 +20,25 @@ Mobile marketplace with a twist: combines buy and sell funtionality with minigam
    cd mobile-storegg
    ```
 
-2. Install dependencies:
+2. Installing Expo:
 
    ```bash
-   npm install
+   npm install expo
    ```
 
-3. Start the development server:
+3. Install dependencies:
+
+   ```bash
+   npx expo install
+   ```
+
+4. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-4. Open Expo Go app and scan the given QR Code
+5. Open Expo Go app and scan the given QR Code
 
 ---
 
