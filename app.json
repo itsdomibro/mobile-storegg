@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "storegg",
     "name": "mobile-storegg-retry",
     "slug": "mobile-storegg-retry",
     "version": "1.0.0",
