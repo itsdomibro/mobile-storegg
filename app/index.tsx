@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import ProductList from "../components/Products/ProductList";
 import { useProducts } from "../hooks/useProducts";
 import ProductSearchBar from "../components/Products/ProductSearchBar";
 import { useState } from "react";
 import ProductActions from "../components/Products/ProductActions";
 import ProductGrid from "../components/Products/ProductGrid";
+import { useStore } from "../storage/useStore";
 
 export default function HomeScreen() {
   const { productsQuery } = useProducts();
   const [search, setSearch] = useState("");
+  const { resetBalance } = useStore();
 
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
@@ -34,6 +36,11 @@ export default function HomeScreen() {
       ) : (
         <ProductList products={filteredProducts} />
       )}
+
+      {/* Reset Coin Button */}
+      <Pressable onPress={resetBalance}>
+        <Text>Reset Coins</Text>
+      </Pressable>
     </View>
   );
 }
