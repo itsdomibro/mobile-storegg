@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { StoreState } from "../types/StoreState";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const useStore = create<StoreState>()(
   persist(
@@ -15,7 +15,6 @@ export const useStore = create<StoreState>()(
             ? state.ownedItems
             : [...state.ownedItems, id],
         })),
-
       removeOwned: (id) =>
         set((state) => ({
           ownedItems: state.ownedItems.filter((itemId) => itemId !== id),
@@ -24,7 +23,6 @@ export const useStore = create<StoreState>()(
 
       addBalance: (amount) =>
         set((state) => ({ balance: state.balance + amount })),
-
       subtractBalance: (amount) =>
         set((state) => ({
           balance:
@@ -32,7 +30,6 @@ export const useStore = create<StoreState>()(
               ? state.balance - amount
               : state.balance,
         })),
-
       resetBalance: () => set({ balance: 0 }),
     }),
     {

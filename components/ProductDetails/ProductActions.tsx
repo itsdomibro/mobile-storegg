@@ -27,23 +27,24 @@ export default function ProductActions({
       {/* Balance Info */}
       <View style={styles.balanceRow}>
         <Text style={styles.balanceLabel}>Your Balance:</Text>
-        <Text style={styles.balanceValue}>${balance}</Text>
+        <Text style={styles.balanceValue}>${balance.toFixed(2)}</Text>
       </View>
 
+      {/* If owned show this, otherwis show this */}
       {owned ? (
         <View style={styles.ownedContainer}>
           <Text style={styles.ownedText}>You own this product</Text>
           <Pressable style={styles.sellButton} onPress={sell}>
-            <Text style={styles.buttonText}>Sell for ${price}</Text>
+            <Text style={styles.buttonText}>Sell for ${price.toFixed(2)}</Text>
           </Pressable>
         </View>
       ) : (
         <Pressable style={styles.buyButton} onPress={handleBuy}>
-          <Text style={styles.buttonText}>Buy for ${price}</Text>
+          <Text style={styles.buttonText}>Buy for ${price.toFixed(2)}</Text>
         </Pressable>
       )}
 
-      {/* Modal */}
+      {/* Modal if not enough balance */}
       <InsufficientCreditsModal
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}

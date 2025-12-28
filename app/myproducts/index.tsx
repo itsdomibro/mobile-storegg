@@ -11,7 +11,7 @@ export default function MyProductsPage() {
   return (
     <View style={{ flex: 1 }}>
       <Text>You own {totalOwnedProducts} products</Text>
-      <Text>Total value: ${totalValue}</Text>
+      <Text>Total value: ${totalValue.toFixed(2)}</Text>
 
       <ProductGrid products={ownedProducts} />
     </View>

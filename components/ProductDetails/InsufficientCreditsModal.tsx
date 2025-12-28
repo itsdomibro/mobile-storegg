@@ -20,9 +20,12 @@ export default function InsufficientCreditsModal({
     >
       <View style={styles.modalOverlay}>
         <View style={styles.modalContainer}>
+          {/* Info */}
           <Text style={styles.modalText}>
             Not enough credits. Do you want to play a game to gain credits?
           </Text>
+
+          {/* Actions */}
           <View style={styles.modalButtons}>
             <Pressable
               style={styles.playButton}
@@ -33,6 +36,7 @@ export default function InsufficientCreditsModal({
             >
               <Text style={styles.buttonText}>Play</Text>
             </Pressable>
+
             <Pressable
               style={styles.backButton}
               onPress={() => setModalVisible(false)}

@@ -4,7 +4,6 @@ import { useProductDetails } from "../../hooks/useProductDetails";
 import ProductImage from "../../components/ProductDetails/ProductImage";
 import ProductInfo from "../../components/ProductDetails/ProductInfo";
 import ProductActions from "../../components/ProductDetails/ProductActions";
-import { useStore } from "../../storage/useStore";
 
 export default function ProductDetails() {
   const { id } = useLocalSearchParams<{ id: string }>();

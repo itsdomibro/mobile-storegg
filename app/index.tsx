@@ -26,7 +26,6 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {/* <ProductHeader balance={15409} /> */}
       <ProductSearchBar value={search} onChangeText={setSearch} />
       <ProductActions viewMode={viewMode} setViewMode={setViewMode} />
 

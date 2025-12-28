@@ -21,7 +21,7 @@ export default function ProductActions({
         <Text style={styles.buttonText}>My Products</Text>
       </Pressable>
 
-      {/* Right: Grid/List Toggle */}
+      {/* Right: Grid/List View Mode */}
       <View style={styles.rightButtons}>
         <Pressable
           style={[styles.button, viewMode && styles.active]}

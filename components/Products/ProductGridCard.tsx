@@ -19,11 +19,14 @@ export default function ProductGridCard({
       style={styles.card}
       onPress={() => router.push(`/products/${id}`)}
     >
+      {/* Top */}
       <Image source={{ uri: image }} style={styles.image} />
+
+      {/* Bottom */}
       <Text style={styles.title} numberOfLines={1}>
         {title}
       </Text>
-      <Text style={styles.price}>${price}</Text>
+      <Text style={styles.price}>${price.toFixed(2)}</Text>
     </Pressable>
   );
 }

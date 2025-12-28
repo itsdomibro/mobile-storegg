@@ -12,18 +12,18 @@ export default function ProductListCard({
       style={styles.card}
       onPress={() => router.push(`/products/${product.id}`)}
     >
-      {/* Left Container */}
+      {/* Left */}
       <View style={styles.leftContainer}>
         <Image source={{ uri: product.image }} style={styles.image} />
       </View>
 
-      {/* Right Container */}
+      {/* Right */}
       <View style={styles.rightContainer}>
         <Text style={styles.title}>{product.title}</Text>
         <Text numberOfLines={2} style={styles.description}>
           {product.description}
         </Text>
-        <Text style={styles.price}>${product.price}</Text>
+        <Text style={styles.price}>${product.price.toFixed(2)}</Text>
       </View>
     </Pressable>
   );

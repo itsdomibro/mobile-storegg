@@ -18,7 +18,6 @@ export function useMyProduct() {
   const ownedProducts = productsQuery.data.filter((p) =>
     ownedItems.includes(p.id)
   );
-
   const totalOwnedProducts = ownedProducts.length;
   const totalValue = ownedProducts.reduce((sum, p) => sum + p.price, 0);
 
