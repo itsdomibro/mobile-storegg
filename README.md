@@ -32,7 +32,7 @@ Mobile marketplace with a twist: combines buy and sell funtionality with minigam
    npx expo start
    ```
 
-4. Open Expo Go app and scan the give QR Code
+4. Open Expo Go app and scan the given QR Code
 
 ---
 
